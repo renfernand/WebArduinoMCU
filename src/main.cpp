@@ -1,8 +1,7 @@
 #include "Arduino.h"
 #include "ESP8266WiFi.h"
 
-const char* ssid = "Rede udi"; const char* password = "1j4b7i2g$4";
-//const char* ssid = "SALA3N320"; const char* password = "1j4b7i2g$3";
+const char* ssid = "SSID DA REDE"; const char* password = "PASSWORD";
 
 //CASO OCORRA PROBLEMAS COM A PORTA 80, UTILIZE OUTRA (EX:8082,8089) E A CHAMADA DA URL FICARÁ IP:PORTA(EX: 192.168.0.15:8082) 
 WiFiServer server(80); 
@@ -47,7 +46,6 @@ void loop() {
     String req = client.readStringUntil('\r'); //FAZ A LEITURA DA PRIMEIRA LINHA DA REQUISIÇÃO
     client.flush(); //AGUARDA ATÉ QUE TODOS OS DADOS DE SAÍDA SEJAM ENVIADOS AO CLIENTE
     
-
     client.println("HTTP/1.1 200 OK"); //ESCREVE PARA O CLIENTE A VERSÃO DO HTTP
     client.println("Content-Type: text/html"); //ESCREVE PARA O CLIENTE O TIPO DE CONTEÚDO(texto/html)
     client.println("");
