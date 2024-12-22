@@ -41,7 +41,6 @@ Serial.begin(9600);
     Serial.print("http://"); 
     Serial.println(WiFi.localIP()); 
 
-    
 }
 
 /*
@@ -64,7 +63,6 @@ void comunicaarduino(){
         digitalWrite(LED_BUILTIN, ledcom); 
       }
     }
-
 }
 
 void loop() {
@@ -87,12 +85,12 @@ void loop() {
     client.println("");
     client.println("<!DOCTYPE HTML>"); 
     client.println("<html>"); 
-    client.println("<h1><center>Teste Renato Fernandes!</center></h1>"); 
-    client.println("<center><font size='5'>Exemplo Controlando LED !</center>"); 
-    client.println("<p><center><a href=\"BTDireita\"><button>DIREITA</button></a></p>"); 
-    client.println("<p><a href=\"BTEsquerda\"><button>ESQUERDA</button></a></p>"); 
-    client.println("<p><a href=\"BTDescer\"><button>DESCER</button></a></p>"); 
-    client.println("<p><a href=\"BTSubir\"><button>SUBIR</button></a></p>"); 
+    client.println("<h1><center><font size='15'>Teste NODEMCU (ESP8266) </center></h1>"); 
+    client.println("<center><font size='10'>Controle remoto dos LED do Arduino</center>"); 
+    client.println("<p><center><a href=\"BTDireita\"><button><font size='15'>DIREITA</button></a></p>"); 
+    client.println("<p><center><a href=\"BTEsquerda\"><button><font size='15'>ESQUERDA</button></a></p>"); 
+    client.println("<p><center><a href=\"BTDescer\"><button><font size='15'>DESCER</button></a></p>"); 
+    client.println("<p><center><a href=\"BTSubir\"><button><font size='15'>SUBIR</button></a></p>"); 
     client.println("</html>"); 
     client.flush();
     //FECHA A TAG "html"
